@@ -1,0 +1,123 @@
+@mixin content{
+    width: 48px;
+    height: 48px;
+    margin: 23px 0 0 32px;
+    position: relative;
+    &:after{
+        content: "";
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        backdrop-filter: blur(6px);
+    }
+    &:before{
+        content: "";
+        width: 48px;
+        height: 48px;
+        top: 6px;
+        right: 6px;
+        position: absolute;
+    }
+}
+.container{
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 525px;
+    height: 500px;
+    background-color: #262626;
+    border: 1px solid #4D4D4D;
+    border-radius: 12px;
+    .cell{
+        cursor: pointer;
+        width: 104.5px;
+        height: 100px;
+        border-left: 1px solid #4D4D4D;
+        border-bottom: 1px solid #4D4D4D;
+        position: relative;
+        &:nth-child(21),
+        &:nth-child(22),
+        &:nth-child(23),
+        &:nth-child(24),
+        &:nth-child(25){
+            border-bottom: 0;
+        }
+        &:nth-child(1),
+        &:nth-child(6),
+        &:nth-child(11),
+        &:nth-child(16),
+        &:nth-child(21){
+            border-left: 0;
+        }
+        > div:last-child:not(:empty){
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            background: #262626;
+            color: #FFFFFF;
+            border: 1px solid #4D4D4D;
+            border-bottom: 0;
+            border-radius: 6px 0px 0px 0px;
+            opacity: 0.4;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .active{
+        background: #2F2F2F;
+    }
+}
+
+.dragging {
+    width: 104.5px;
+    height: 100px;
+    background: #262626;
+    border: 1px solid #4D4D4D;
+    border-radius: 12px;
+    > div:last-child{
+        display: none;
+    }
+}
+.content1{
+    @include content;
+    &:after{
+        background: rgba(127, 170, 101, 0.35);
+    }
+    &:before{
+        background: rgba(127, 170, 101, 1);
+    }
+}
+.content2{
+    @include content;
+    &:after{
+        background: rgba(170, 151, 101, 0.35);
+    }
+    &:before{
+        background: rgba(170, 151, 101, 1);
+    }
+}
+.content3{
+    @include content;
+    &:after{
+        background: rgba(101, 108, 170, 0.35);
+    }
+    &:before{
+        background: rgba(101, 108, 170, 1);
+    }
+}

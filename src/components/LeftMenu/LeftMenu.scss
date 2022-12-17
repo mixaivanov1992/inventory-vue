@@ -1,0 +1,68 @@
+@mixin child{
+    background: linear-gradient(90deg, #3C3C3C 0%, #444444 51.04%, #333333 100%);
+    border-radius: 8px;
+}
+
+.left_menu{
+    width: 236px;
+    height: 500px;
+    margin-bottom: 24px;
+    margin-right: 24px;
+    background: #262626;
+    border: 1px solid #4D4D4D;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .image{
+        background-image: url('./../../assets/img/ImgBlur.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        width: 208px;
+        height: 240px;
+        margin: 18px 14px 20px;
+    }
+    .child1{
+        width: 190px;
+        height: 26px;
+        margin-bottom: 24px;
+        @include child;
+    }
+    .child2{
+        width: 155px;
+        height: 10px;
+        margin-bottom: 16px;
+        @include child;
+    }
+    .child3{
+        width: 190px;
+        height: 10px;
+        margin-bottom: 16px;
+        @include child;
+    }
+    .child4{
+        width: 170px;
+        height: 10px;
+        margin-bottom: 16px;
+        @include child;
+    }
+    .child5{
+        width: 160px;
+        height: 10px;
+        margin-bottom: 16px;
+        @include child;
+    }
+    .child6{
+        width: 140px;
+        height: 10px;
+        margin-bottom: 24px;
+        @include child;
+    }
+    .child7{
+        width: 80px;
+        height: 10px;
+        margin-bottom: 24px;
+        @include child;
+    }
+}

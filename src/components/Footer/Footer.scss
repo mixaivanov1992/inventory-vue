@@ -1,0 +1,31 @@
+footer{
+    width: 785px;
+    height: 72px;
+    background: #262626;
+    border: 1px solid #4D4D4D;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    .content{
+        width: 699px;
+        height: 36px;
+        margin-right: 42px;
+        margin-left: 18px;
+        background: linear-gradient(90deg, #3C3C3C 0%, #444444 51.04%, #333333 100%);
+        border-radius: 12px;
+    }
+    .close{
+        position: relative;
+        &:before{
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            width: 12px;
+            height: 12px;
+            background-image: url('./../../assets/img/close.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+    }
+}
