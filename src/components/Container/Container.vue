@@ -97,7 +97,7 @@ export default {
     },
     countChange(content, count){
       const item = this.items.find((item) => item.content === content);
-      item.count = item.count < count ? 0 : item.count - count;
+      item.count = +item.count < +count ? 0 : item.count - count;
     }
   },
   beforeMount() {

@@ -10,7 +10,7 @@ import './assets/styles/style.css';
 import LeftMenu from './components/LeftMenu/LeftMenu.vue';
 import Container from './components/Container/Container.vue';
 import Footer from './components/Footer/Footer.vue';
-
+localStorage.clear();
 export default {
   name: 'App',
   components: {
