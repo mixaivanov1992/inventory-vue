@@ -83,9 +83,12 @@ export default {
       }
     },
     activeItem(e){
-      e.currentTarget.classList.add('active');
       const id = +e.currentTarget.dataset.id;
-      this.active = this.items.find((item) => item.id === id)?.content || '';
+      const item = this.items.find((item) => item.id === id);
+      if(item.content){
+        e.currentTarget.classList.add('active');
+        this.active = this.items.find((item) => item.id === id)?.content || '';
+      }
     },
     closeRightMenu(){
       const cell = document.querySelector('.cell.active');
